@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main()
+{
+    int units, bill = 0;
+
+    printf("Enter units: ");
+    scanf("%d", &units);
+
+    if(units <= 100)
+    {
+        bill = units * 5;
+    }
+    else if(units <= 200)
+    {
+        bill = 500 + (units - 100) * 7;
+    }
+    else if(units <= 300)
+    {
+        bill = 1200 + (units - 200) * 10;
+    }
+    else
+    {
+        bill = 2200 + (units - 300) * 12;
+    }
+
+    printf("Bill: %d", bill);
+
+    return 0;
+}
